@@ -9,7 +9,7 @@ resource aws_vpc "hashicat" {
 
   tags = {
     name = "${var.prefix}-vpc"
-    Billing = true
+    Billable = true
     Department = "devops"
   }
 }
@@ -20,7 +20,7 @@ resource aws_subnet "hashicat" {
 
   tags = {
     name = "${var.prefix}-subnet"
-    Billing = true
+    Billable = true
     Department = "devops"
   }
 }
@@ -61,7 +61,7 @@ resource aws_security_group "hashicat" {
 
   tags = {
     Name = "${var.prefix}-security-group"
-    Billing = true
+    Billable = true
     Department = "devops"
   }
 }
@@ -76,7 +76,7 @@ resource aws_internet_gateway "hashicat" {
 
   tags = {
     Name = "${var.prefix}-internet-gateway"
-    Billing = true
+    Billable = true
     Department = "devops"
   }
 }
@@ -132,7 +132,7 @@ resource aws_instance "hashicat" {
 
   tags = {
     Name = "${var.prefix}-hashicat-instance"
-    Billing = true
+    Billable = true
     Department = "devops"
   }
 }
