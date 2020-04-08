@@ -138,7 +138,7 @@ resource aws_instance "hashicat" {
 }
 
 resource "aws_vpc" "hashicat_vpc" {
-  cidr_block = "10.1.1.0/16"
+  cidr_block = "10.1.0.0/16"
   
   tags = {
     Name = "${var.prefix}-vpc"
