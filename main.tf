@@ -137,6 +137,16 @@ resource aws_instance "hashicat" {
   }
 }
 
+resource "aws_vpc" "hashicat_vpc" {
+  cidr_block = "10.0.0.0/16"
+  
+  tags = {
+    Name = "${var.prefix}-vpc"
+    Billable = true
+    Department = "devops"
+  }
+}
+
 # We're using a little trick here so we can run the provisioner without
 # destroying the VM. Do not do this in production.
 
